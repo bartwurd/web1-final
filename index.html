@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 1 Final Assignment</title>
+</head>
+<body>
+    <!-- it's a good idea to put things inside boxes, and those boxes inside 
+     of bigger boxes. The biggest box in this case is div class=container -->
+<div class="container">
+    <!-- I put the nav information in another box called navbox.  The first thing in the navbox is the logo because it is 
+     the first thing that appears on the mobile page, in an orange box to be added in CSS. Below that, I made an unordered 
+     list with each list item being a different link on the nav bar. Below that I made a nested div box with the search bar inside it.
+     This is to make the searchbar easier to isolate in CSS for styling.-->
+    <div class="navbox">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="The logo for the website, consisting of three golden stars on an orange background">
+            </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            <div class="searchbar">
+                <form>
+                    <input id="search" type="text" name="search" placeholder="Search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <section>
+        <header>
+            <!-- inside of a new section I made a header with a new div box in it called welcomebox. Inside of that
+            is the main banner image with alt text, followed by an article with an h1 (since it's the 
+            largest text on the page) to write the welcome message. Then lorem ipsum below it in a paragraph
+            as the descriptive text. After the article I placed a "connect with us" button. It made sense to put all this in one box
+            because the text and button are contained within the parameters of the picture.-->
+        <div class="welcomebox">
+            <img src="images/main-banner.jpg" alt="An image of a busy, modern looking office space">
+            <article>
+            <h1>Welcome to Three Star Media</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </article>
+                <button type="submit">Connect With Us</button>
+        </div>
+        </header>
+    </section>
+    <!-- in a new divbox called aboutbox, I put the about us image with alt text (for accessibility) 
+    And then an h2 (it is smaller than the welcome text) for About Us. Then a paragraph. The picture will have a margin around it 
+    to give the space between it and the edge in the mobile example. It's paired in a box with the text below it for styling because
+    the photo and text exist on the same beige panel in the mockup.-->
+    <section>
+        <div class="aboutbox">
+            <img src="images/about-us.jpg" alt="An image of a ping pong table in a large break room">
+            <article>
+            <h2>About Us</h2>
+            <p>Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl 
+                malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per 
+                conubia nostra inceptos himenaeos.</p>
+            </article>
+        </div>
+    </section>
+    <!-- here I made a large nesting box for other boxes called servicebox. This is because it containes all of the smaller, similar 
+    boxes that denote each service the business offers. First is an h2 then an image, then each nested box has a smaller h3 for slightly smaller
+    text. then a paragraph and then a button for the service-->
+    <section>
+        <div class="servicebox">
+            <h2>Our Services</h2>
+            <div class="digitrans">
+                <img src="images/digital.jpg" alt="An image of a hand holding a cell phone in one hand while working on a computer with the other">
+                <article>
+                <h3>Digital Transformation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                    Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis 
+                    convallis tempus leo eu aenean.</p>
+                    <button type="submit">Digital Plans</button>
+                </article>
+            </div>
+            <div class="marketing">
+                <img src="images/marketing.jpg" alt="an image of an open laptop with graphs on the screen">
+                <article>
+                <h3>Marketing</h3>
+                <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus
+                    bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit.</p>
+                </article>
+                    <button type="submit">Marketing Plans</button>
+            </div>
+            <div class="video">
+                <img src="images/video" alt="an image of a hand holding a phone with a video app open">
+                <article>
+                <h3>Video Production</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. Sem 
+                    placerat in id cursus mi pretium tellus. Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar 
+                    vivamus fringilla lacus.</p>
+                </article>
+                <button type="submit">Video Plans</button>
+            </div>
+            <div class="webdev">
+                <img src="images/web.jpg" alt="An image of a phone with Instagram open on the screen">
+                <article>
+                <h3>Web Development</h3>
+                <p>Nec metus bibendum egestas iaculis massa nisl malesuada. Integer nunc posuere ut hendrerit semper vel class. Taciti
+                    sociosqu ad litora torquent per conubia nostra. Himenaeos orci varius natoque penatibus et magnis dis. </p>
+                    <button type="submit">Web Plans</button>
+                </article>
+            </div>
+            <div class="print">
+                <img src="images/print.jpg" alt="An image of six newspaper boxes on a sidewalk with a busy street behind them">
+                <article>
+                <h3>Print</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus ex sapien vitae pellentesque sem placerat in. 
+                    Cursus mi pretium tellus duis convallis tempus leo. Aenean sed diam urna tempor pulvinar vivamus fringilla.</p>
+                <button type="submit">Print Plans</button>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- the next obvious box is the Our Vision section which i put in a box called vision. It makes sense to group
+    the image and h3 and paragraph together because the text elements and learn more button all exist on top of the image in the mockup.-->
+    <section>
+        <div class="vision">
+            <img src="images/vision.jpg" alt="An image of 5 paper boats, positioned as though moving in formation">
+            <article>
+            <h3>Our Vision</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sapien vitae pellentesque sem placerat in id
+                cursus. Duis convallis tempus leo eu aenean sed diam. Vivamus fringilla lacus nec metus bibendum egestas iaculis. </p>
+            </article>
+            <button type="submit">Learn More</button>
+        </div>
+    </section>
+    <!-- next I made a box called team with nested div classes for each employee. These included an image of the employee
+    and an article with their name, title and a paragraph about them.-->
+    <section>
+        <div class="team">
+            <div class="johndoe">
+                <img src="images/john.jpg" alt="An image of CEO and co-owner John Doe">
+                <article>
+                <h3>John Doe</h3>
+                <h4> CEO and Co-owner</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. 
+                    Sem placerat in id cursus mi pretium tellus. </p>
+                </article>
+            </div>
+            <div class="bobrite">
+                <img src="images/bob.jpg" alt="An image of CFO and co-owner Bob Rite">
+                <article>
+                <h3>Bob Rite</h3>
+                <h4>CFO and Co-Owner</h4>
+                <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus 
+                    nec metus bibendum egestas iaculis massa nisl.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- the next section after is the white box that contains the contact form, the hours table and the google maps address.
+    For the contact section, each form element has a label and an input box. At the bottom there is a submit button to send 
+    all of the information.-->
+    <section>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <h3>Send us a message</h3>
+            <form>
+                <label for="fullname">Full Name</label>
+                <input id="fullname" type="text">
+            </form>
+            <form>
+                <label for="email">Email</label>
+                <input id="email" type="email">
+            </form>
+            <form>
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+            </form>
+            <button type="submit">Send</button>
+        </div>
+        <!-- hours is a smaller nested div class with an h2 heading and a table with the business hours.
+        thead denotes the top of the table. tr is a row of things in a table and I want days and hours 
+        next to each other at the top so they are each a th representing a header within the tr.
+        This makes it so there are two columns. the tbody is the contents of the table beyond the header.
+        here the t rows had the days of the week and the hours for those days as td which is for data inside a table-->
+        <div class="hours">
+            <h2>Hours of Operation</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th>Days</th>
+                    <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Monday - Friday</td>
+                    <td>9 AM - 6 PM</td>
+                    </tr>
+                    <tr>
+                    <td>Saturday - Sunday</td>
+                    <td>Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- then another nested divclass called location with an iframe inside.-->
+        <div class="location">
+            <h2>Location</h2>
+                        <div class="limit">
+                    <!-- iframe lets you embed an element from another site into yours but you can only control the width and height. In this case,
+                    I am embedding google maps with the algonuquin college address selected-->
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.978110074505!2d-75.76016752386619!3d45.34925414110096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1785333435718!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+        </div>
+    </section>
+</div>
+<!-- after the end of the last section the div for the container box is closed. Then the footer is put in containing
+ the copyright information and a link to unsplash, where the images came from.-->
+<footer>
+    <p>&copy; Copyright Three Star Media, 2020</p>
+    <p>All images are taken from <a href="https://unsplash.com/">Unsplash</a></p>
+</footer>
+</body>
+</html>

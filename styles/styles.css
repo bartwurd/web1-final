@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*****************************************************************************************************
+                MAIN STYLES
+******************************************************************************************************/
+.container{
+    background: white;
+    max-width:1200px; /* max-width ensures your site won't expand forever */
+    margin:0 auto; /* margin auto on the left and right centers the object on the screen */
+}
+
+body{
+font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+h1{
+    font-size: 4em;
+    font-weight:bold;
+}
+
+h2{
+    font-size: 3em;
+    font-weight:bold;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.navbox{
+background:black;
+padding:10px;
+}
+
+.logo{
+    background:#c78c06;
+}
+
+nav a{
+    display:block; /* to make it look like buttons with a width and height */
+    background:black;
+    padding: 1em 0; /* two values means: top-bottom, left-right */
+    text-align:center;
+    text-decoration:none;   
+    color:#c78c06;
+}
+/* the following centers the box containing the search bar and spreads it to the edges of the page,
+ minus a 5 px margin on the sides and bottom */
+.searchbar{;
+padding: 0 10px 10px 10px;
+background:black;
+}
+
+.searchbar form{
+    display:flex;
+}
+
+.searchbar form input{
+    flex-grow:1; /* flex grow lets the search bar's input bar grow to be as big as the page will allow */
+}
+
+/* the following styles the search button, removing the background colour from it and changing the colour of the border
+and search icon to orange */
+.searchbutton{
+    color:#c78c06;
+    background:none;
+    border:2px solid #c78c06;
+}
+
+/* and a hover and an active state - hover for anything with a cursor, active for touch screens */
+nav a:hover, nav a:active{
+    background:hsl(0, 0%, 22%);
+}
+
+nav .current a{
+    background:#c78c06;
+    color:black;
+
+}
+
+/* I googled how to make the text display on top of my image in CSS and copied the code from there. The .welcomebox img
+has width and height controls so it stretches or shrinks to fit the site's size properly. objectfit:cover forces the image to scale
+without being distorted, supposedly */
+
+.welcomebox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* for .welcome box, the position: relative tag keeps the absolute child confined within the box. */ 
+.welcomebox{
+  position: relative; /* Keeps the absolute child restricted inside this box */
+  width: 100%;
+  max-width: 100%;  /* Adjust based on your design */
+  height: 100%;     /* Adjust based on your design */
+  overflow: hidden;  /* Prevents any image overflow */
+  color:white;
+}
+
+
+/* the welcome text styling adds the transparent black bg behind the text in addition to styling its size */
+.welcometext{
+    margin-top:10%;
+    margin-bottom:10%;
+    position: absolute; /* this forces the text box on top of the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76%;
+    background:rgba(0, 0, 0, 0.477);
+}
+
+.welcometext h1{
+    line-height:150%;
+    margin-bottom:20px;
+}
+
+.welcometext button{
+    display:flex; /* this was to better center the text on the button, though it actually made it slightly too high instead of slightly too low */
+    padding:20px;
+    margin:10px;
+    align-content:center;
+}
+
+.connectwithus{
+    color:black;
+    background:#c78c06;
+    border:none
+    
+}
+
+
+

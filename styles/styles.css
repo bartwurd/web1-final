@@ -69,7 +69,7 @@ font-family: "Open Sans", sans-serif;
 
 
 h1{
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight:bold;
 }
 
@@ -87,6 +87,13 @@ h4{
     font-size: 1em;
     font-weight: bold;
 }
+
+
+
+/*************************************************************************
+NAV BOX
+**************************************************************************/
+
 
 .navbox{
 background:black;
@@ -106,7 +113,7 @@ nav a{
     color:#c78c06;
 }
 /* the following centers the box containing the search bar and spreads it to the edges of the page,
- minus a 5 px margin on the sides and bottom */
+ minus a 10 px margin on the sides and bottom */
 .searchbar{;
 padding: 0 10px 10px 10px;
 background:black;
@@ -139,22 +146,27 @@ nav .current a{
 
 }
 
+
+/*************************************************************************
+WELCOME BOX
+**************************************************************************/
+
+
 /* I googled how to make the text display on top of my image in CSS and copied the code from there. The .welcomebox img
 has width and height controls so it stretches or shrinks to fit the site's size properly. objectfit:cover forces the image to scale
 without being distorted, supposedly */
 
 .welcomebox img{
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  height: 100%; 
 }
 
 /* for .welcome box, the position: relative tag keeps the absolute child confined within the box. */ 
 .welcomebox{
   position: relative; /* Keeps the absolute child restricted inside this box */
   width: 100%;
-  max-width: 100%;  /* Adjust based on your design */
-  height: 100%;     /* Adjust based on your design */
+  max-width: 100%;  
+  height: 100%;     
   overflow: hidden;  /* Prevents any image overflow */
   color:white;
 }
@@ -164,24 +176,35 @@ without being distorted, supposedly */
 .welcometext{
     margin-top:10%;
     margin-bottom:10%;
+    padding-left:10px;
+    padding-right:10px;
     position: absolute; /* this forces the text box on top of the image */
     top: 0;
     left: 0;
     width: 100%;
-    height: 76%;
+    height: auto;
     background:rgba(0, 0, 0, 0.477);
 }
 
 .welcometext h1{
-    line-height:150%;
+    line-height:150%; /* added more space between the lines in the h1 welcome */
     margin-bottom:20px;
 }
 
 .welcometext button{
-    display:flex; /* this was to better center the text on the button, though it actually made it slightly too high instead of slightly too low */
+    display:flex; 
     padding:20px;
-    margin:10px;
-    align-content:center;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:16pt;
+}
+
+
+/* the new span targeting below was because when the text was targeted as part of the arrow object, it sat at the
+top of the arrow's box rather than being properly centered. */
+.welcometext button span{
+    display:flex;
+    align-items:center;
 }
 
 .connectwithus{
@@ -191,5 +214,358 @@ without being distorted, supposedly */
     
 }
 
+.welcometext button:hover, welcometext button:active{
+    background:#644703;
+    
+}
+
+/************************************************************************************************
+ABOUT BOX
+*****************************************************************************************************/
+
+/*next I will style the about box div. it requires a beige background with the image and text elements
+placed on top with slight padding around each to push them away from the edges and each other */
 
 
+.aboutbox{
+    background:#ffe6ac;
+    padding:10px;
+}
+
+.aboutbox img{
+    width: 100%;
+    height: 100%;
+}
+
+.aboutbox h2{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.aboutbox p{
+    margin-bottom:10px;
+}
+/* the margins used here space the text out a bit to better match the mockup */
+
+
+/*******************************************************************************************************
+SERVICE BOX
+********************************************************************************************************/
+
+.servicebox{
+    background:white;
+    padding:10px;
+}
+
+.servicebox h2{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+/* the following is css for the .digitrans class within the servicebox class */
+.digitrans{
+    background:#ffe6ac;
+    padding-bottom:1px; /*adding this miniscule amount of padding to the bottom of this element fixed an error I was 
+    having with the margin on my button not pushing it away from the bottom of the box */
+}
+
+.digitrans img{
+    height:100%;
+    width:100%;
+}
+
+.digitrans h3{
+    padding:20px 10px 20px 10px;
+}
+
+.digitrans p{
+    margin:10px;
+}
+
+.digitrans button{
+    display:flex; 
+    padding:20px;
+    margin:10px;
+    font-size:16pt;
+}
+
+.digitrans button span{
+    display:flex;
+    align-items:center;
+}
+
+.digitalplans{
+    color:white;
+    background:black;
+    border:none;
+
+}
+
+.digitrans button:hover, digitrans button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+/* the following is css for the .marketing class within the servicebox class */
+.marketing{
+    background:#ffe6ac;
+    margin-top:15px;
+    padding-bottom:1px; /*adding this miniscule amount of padding to the bottom of this element fixed an error I was 
+    having with the margin on my button not pushing it away from the bottom of the box */
+}
+
+.marketing img{
+    height:100%;
+    width:100%;
+}
+
+.marketing h3{
+    padding:20px 10px 20px 10px;
+}
+
+.marketing p{
+    margin:10px;
+}
+
+.marketing button{
+    display:flex; 
+    padding:20px;
+    margin:10px;
+    font-size:16pt;
+}
+
+.marketing button span{
+    display:flex;
+    align-items:center;
+}
+
+.marketingplans{
+    color:white;
+    background:black;
+    border:none;
+
+}
+
+.marketing button:hover, marketing button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+/* the following is css for the .video class within the servicebox class */
+.video{
+    background:#ffe6ac;
+    margin-top:15px;
+    padding-bottom:1px; /*adding this miniscule amount of padding to the bottom of this element fixed an error I was 
+    having with the margin on my button not pushing it away from the bottom of the box */
+}
+
+.video img{
+    height:100%;
+    width:100%;
+}
+
+.video h3{
+    padding:20px 10px 20px 10px;
+}
+
+.video p{
+    margin:10px;
+}
+
+.video button{
+    display:flex; 
+    padding:20px;
+    margin:10px;
+    font-size:16pt;
+}
+
+.video button span{
+    display:flex;
+    align-items:center;
+}
+
+.videoplans{
+    color:white;
+    background:black;
+    border:none;
+
+}
+
+.video button:hover, video button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+/* the following is css for the .webdev class within the servicebox class */
+.webdev{
+    background:#ffe6ac;
+    margin-top:15px;
+    padding-bottom:1px; /*adding this miniscule amount of padding to the bottom of this element fixed an error I was 
+    having with the margin on my button not pushing it away from the bottom of the box */
+}
+
+.webdev img{
+    height:100%;
+    width:100%;
+}
+
+.webdev h3{
+    padding:20px 10px 20px 10px;
+}
+
+.webdev p{
+    margin:10px;
+}
+
+.webdev button{
+    display:flex; 
+    padding:20px;
+    margin:10px;
+    font-size:16pt;
+}
+
+.webdev button span{
+    display:flex;
+    align-items:center;
+}
+
+.webplans{
+    color:white;
+    background:black;
+    border:none;
+
+}
+
+.webdev button:hover, webdev button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+/* the following is css for the .print class within the servicebox class */
+.print{
+    background:#ffe6ac;
+    margin-top:15px;
+    padding-bottom:1px; /*adding this miniscule amount of padding to the bottom of this element fixed an error I was 
+    having with the margin on my button not pushing it away from the bottom of the box */
+}
+
+.print img{
+    height:100%;
+    width:100%;
+}
+
+.print h3{
+    padding:20px 10px 20px 10px;
+}
+
+.print p{
+    margin:10px;
+}
+
+.print button{
+    display:flex; 
+    padding:20px;
+    margin:10px;
+    font-size:16pt;
+}
+
+.print button span{
+    display:flex;
+    align-items:center;
+}
+
+.printplans{
+    color:white;
+    background:black;
+    border:none;
+
+}
+
+.print button:hover, print button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+
+/*************************************************************************
+OUR VISION
+**************************************************************************/
+
+.vision img{
+  width: 100%;
+  height: 260px; 
+  object-fit: cover;       /* Crops from the top and bottom while retaining scale */
+  object-position: center;
+}
+
+/* for .welcome box, the position: relative tag keeps the absolute child confined within the box. */ 
+.vision{
+  position: relative; /* Keeps the absolute child restricted inside this box */
+  width: 100%;
+  max-width: 100%;  
+  height: 100%;     
+  overflow: hidden;  /* Prevents any image overflow */
+  color:white;
+}
+
+.vistext{
+    position:absolute;
+}
+
+.vistext{
+    margin-top:10px;
+    margin-bottom:10%;
+    padding-left:10px;
+    padding-right:10px;
+    position: absolute; /* this forces the text box on top of the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    align-content:center;
+}
+
+.vistext h3{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.vistext p{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.vision button{
+    display:flex; 
+    padding:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:16pt;
+}
+
+.vision button span{
+    display:flex;
+    align-items:center;
+}
+
+.learnmore{
+    color:white;
+    background:black;
+    border:1px, solid #c78c06;
+
+}
+
+.vision button:hover, vision button:active{
+    background:#6f6f6f;
+    
+}

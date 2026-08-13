@@ -67,6 +67,9 @@ font-family: "Open Sans", sans-serif;
     "wdth" 100;
 }
 
+p{
+    font-size: 12pt
+}
 
 h1{
     font-size: 3.5em;
@@ -156,17 +159,15 @@ WELCOME BOX
 has width and height controls so it stretches or shrinks to fit the site's size properly. objectfit:cover forces the image to scale
 without being distorted, supposedly */
 
-.welcomebox img{
+header img{
   width: 100%;
   height: 100%; 
+ position: absolute;
 }
 
 /* for .welcome box, the position: relative tag keeps the absolute child confined within the box. */ 
-.welcomebox{
-  position: relative; /* Keeps the absolute child restricted inside this box */
-  width: 100%;
-  max-width: 100%;  
-  height: 100%;     
+header{
+  position: relative; /* Keeps the absolute child restricted inside this box */   
   overflow: hidden;  /* Prevents any image overflow */
   color:white;
 }
@@ -174,15 +175,11 @@ without being distorted, supposedly */
 
 /* the welcome text styling adds the transparent black bg behind the text in addition to styling its size */
 .welcometext{
+    position:relative;
+    z-index:3;
     margin-top:10%;
     margin-bottom:10%;
-    padding-left:10px;
-    padding-right:10px;
-    position: absolute; /* this forces the text box on top of the image */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    padding:10px;
     background:rgba(0, 0, 0, 0.477);
 }
 
@@ -195,7 +192,6 @@ without being distorted, supposedly */
     display:flex; 
     padding:20px;
     margin-top:10px;
-    margin-bottom:10px;
     font-size:16pt;
 }
 
@@ -210,7 +206,8 @@ top of the arrow's box rather than being properly centered. */
 .connectwithus{
     color:black;
     background:#c78c06;
-    border:none
+    border:none;
+    
     
 }
 
@@ -561,11 +558,200 @@ OUR VISION
 .learnmore{
     color:white;
     background:black;
-    border:1px, solid #c78c06;
+    border:2px, solid #c78c06;
 
 }
 
 .vision button:hover, vision button:active{
     background:#6f6f6f;
     
+}
+
+
+/***************************************************************************************
+TEAM
+*****************************************************************************************/
+
+/* the following css will style the team section. I'm going to do it similarly to the services section,
+a series of smaller boxes inside one larger container, this time without buttons and using a border-bottom
+to add that orange underline*/
+
+.team{
+    background:white;
+    padding:10px;
+}
+
+.team h2{
+margin-top:20px;
+margin-bottom:20px;
+}
+
+.team h3{
+    margin:10px;
+}
+
+.team h4{
+
+    border-bottom:2px solid #c78c06;
+    margin:10px;
+}
+
+.johndoe{
+    background:#ffe6ac;
+}
+.johndoe img{
+    height:100%;
+    width:100%;
+}
+
+.johndoe p{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+
+.bobrite{
+    background:#ffe6ac;
+}
+.bobrite img{
+    height:100%;
+    width:100%;
+}
+
+.bobrite p{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+
+
+
+/********************************************************************************************
+CONTACT
+**********************************************************************************************/
+
+.contact{
+    margin:10px;
+}
+
+.contact h2{
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+
+.contact p{
+    margin-top: 10px;
+    margin-bottom:5px;
+}
+
+
+/* The following allows the form entry boxes to span the whole box */
+.contact form input[type="text"],
+.contact form input[type="email"],
+textarea {
+  width: 100%;
+  
+}
+
+.contact button{
+    display:flex; 
+    padding:5px;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:12pt;
+}
+
+.contact button span{
+    display:flex;
+    align-items:center;
+}
+
+.contactsend{
+    color:#c78c06;
+    background:black;
+    border:2px, solid #c78c06;
+
+}
+
+.contact button:hover, contact button:active{
+    background:#6f6f6f;
+    
+}
+
+
+
+/**************************************************************************
+HOURS
+***************************************************************************/
+/*I borrowed the following code from google. It is mostly stuff I used elsewhere but I was having 
+trouble combining it correctly. I modified it a bit to make it match the mockup more.  */
+
+.hours h3{
+    margin:10px;
+}
+
+.hours, table {
+  width: 100%;
+}
+
+/* 2. Re-establish text alignment and padding */
+.hours table th {
+  text-align: center;          
+  padding:10px;
+}
+
+.hours, table, th, td {
+  padding: 10px;        
+  vertical-align: top;  
+  text-align:left;    
+}
+
+.hours table tr {
+  border-bottom: 1px solid black;
+}
+
+/* Optional: Full grid styling */
+.hours table, th, td {
+  border: 1px solid black;
+}
+
+thead th {
+  background-color: #ffe6ac;
+}
+
+/*************************************************************************
+LOCATION
+***************************************************************************/
+
+/*following this I style the location. It's pretty simple, just adding some padding
+and setting the iframe's width to 100% so it scales properly */
+
+.location {
+    padding:10px;
+}
+
+.map iframe{
+    width:100%;
+}
+
+
+
+/*******************************************************************************
+FOOTER
+**********************************************************************************/
+
+/* the footer styling is pretty simple; a black box with orange text and some padding */
+
+footer{
+    background-color:black;
+    color:#c78c06;
+}
+
+footer p{
+    
+    padding:10px;
+    font-size: 10pt;
 }

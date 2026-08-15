@@ -690,12 +690,13 @@ HOURS
 trouble combining it correctly. I modified it a bit to make it match the mockup more.  */
 
 .hours h3{
-    margin:10px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .hours, table {
-  width: 100%;
-}
+  width: auto;
+} 
 
 /* 2. Re-establish text alignment and padding */
 .hours table th {
@@ -755,3 +756,130 @@ footer p{
     padding:10px;
     font-size: 10pt;
 }
+
+
+
+
+/********************************************************************************************
+DESKTOP STYLES
+*********************************************************************************************/
+
+
+/*The following media query will allow me to override the site's mobile stylings
+when the site is displayed wider than 760px */
+
+@media screen and (min-width:760px){
+
+    /*************************************
+    NAV
+    **************************************/
+
+    nav{
+        display:flex;
+        width:100%;
+        align-items:center;
+        justify-content: center;
+    }
+    nav ul{
+        display:flex;
+    }
+
+    .logo{
+        margin:20px;
+    }
+
+    nav ul li{
+        width: 100px;
+    }
+
+    nav ul{
+        margin-left:20px;
+    }
+
+    /*****************************************
+    WELCOME BOX
+    ******************************************/
+    
+
+    .welcometext{
+        margin-left:10%;
+        margin-right:10%;
+    }
+
+
+    /******************************************
+    ABOUT BOX
+    ******************************************/
+
+    .aboutbox{
+        display:flex;
+        justify-content: center;
+    }
+
+    .abouttext{
+        margin-left:10px;
+        width:40%;
+    }
+
+    .aboutbox img{
+        width:40%;
+    }
+
+    /*************************************************
+    SERVICES
+    **************************************************/
+
+    /* I'm going to use flexbox to style the desktop service section. I thought about using grid here,
+    but with there being 2 wider boxes on top and 3 skinny below, it would mean doing more math than I wanted to.
+    Instead I'm wrapping the header for it and the top two boxes in new divs and the bottom three in a new div, so that within
+    those divs I can display flex but then have those 3 flexboxes separate from each other so one sits on top
+    of the other. */
+
+    .servicebox{
+        width:80%;
+    }
+
+    .servicehead{
+        margin-left:
+    }
+
+    .servicetop{
+        display:flex;
+        
+    }
+
+    .servicebtm{
+        display:flex;
+    }
+
+    .digitrans{
+        margin:5px;
+    }
+
+    .digitrans img{
+        height:300px;
+    }
+
+    .marketing{
+        margin:5px;
+    }
+
+    .marketing img{
+        height:300px;
+    }
+
+   .video{
+        margin:5px;
+    }
+
+    .video img{
+        height:300px;
+    }
+
+    .digitrans button{
+        width:96%;
+    }
+
+    .marketing button{
+        width:96%;
+    }

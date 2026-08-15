@@ -72,11 +72,15 @@
     <section>
         <article>
             <div class="aboutbox">
-                <img src="images/about-us.jpg" alt="An image of a ping pong table in a large break room">
-                    <h2>About Us</h2>
-                        <p>Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl 
-                        malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per 
-                        conubia nostra inceptos himenaeos.</p>
+                    <img src="images/about-us.jpg" alt="An image of a ping pong table in a large break room">
+                        <div class="abouttext"> <!-- putting the text in another box lets me place it
+                            beside the image in css with flexbox, without the heading and paragraph
+                            going beside each other as well-->
+                            <h2>About Us</h2>
+                                <p>Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl 
+                                malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per 
+                                conubia nostra inceptos himenaeos.</p>
+                        </div>
             </div>
         </article>
     </section>
@@ -85,74 +89,80 @@
     text. then a paragraph and then a button for the service-->
     <section>
         <div class="servicebox">
+            <div class="servicehead">
             <h2>Our Services</h2>
-                <article>
-                    <div class="digitrans">
-                        <img src="images/digital.jpg" alt="An image of a hand holding a cell phone in one hand while working on a computer with the other">
+            </div>
+
+            <div class="servicetop"
+                    <article>
+                        <div class="digitrans">
+                            <img src="images/digital.jpg" alt="An image of a hand holding a cell phone in one hand while working on a computer with the other">
+                            
+                            <h3>Digital Transformation</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                                Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis 
+                                convallis tempus leo eu aenean.</p>
+                                <button class="digitalplans" type="submit"><span>Digital Plans</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                            </button>
                         
-                        <h3>Digital Transformation</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.
-                            Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis 
-                            convallis tempus leo eu aenean.</p>
-                            <button class="digitalplans" type="submit"><span>Digital Plans</span>
-                        <span class="material-symbols-outlined">arrow_right</span>
-                        </button>
-                    
-                    </div>
-            </article>
-                <article>
-                    <div class="marketing">
-                        <img src="images/marketing.jpg" alt="an image of an open laptop with graphs on the screen">
-                        
-                        <h3>Marketing</h3>
-                        <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus
-                            bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit.</p>
-                        
-                            <button class="marketingplans" type="submit"><span>Marketing Plans</span>
-                        <span class="material-symbols-outlined">arrow_right</span>
-                        </button>
-                    </div>
-            </article>
-                <article>
-                    <div class="video">
-                    <img src="images/video.jpg" alt="an image of a hand holding a phone with a video app open">
-                    
-                    <h3>Video Production</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. Sem 
-                        placerat in id cursus mi pretium tellus. Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar 
-                        vivamus fringilla lacus.</p>
-                    
-                    <button class="videoplans" type="submit"><span>Video Plans</span>
-                    <span class="material-symbols-outlined">arrow_right</span>
-                    </button>
-                </div>
-            </article>
-            <article>
-                <div class="webdev">
-                    <img src="images/web.jpg" alt="An image of a phone with Instagram open on the screen">
-                    
-                    <h3>Web Development</h3>
-                    <p>Nec metus bibendum egestas iaculis massa nisl malesuada. Integer nunc posuere ut hendrerit semper vel class. Taciti
-                        sociosqu ad litora torquent per conubia nostra. Himenaeos orci varius natoque penatibus et magnis dis. </p>
-                        <button class="webplans" type="submit"><span>Web Plans</span>
-                    <span class="material-symbols-outlined">arrow_right</span>
-                    </button>
-                    
-                </div>
-            </article>
-                <article>
-                    <div class="print">
-                        <img src="images/print.jpg" alt="An image of six newspaper boxes on a sidewalk with a busy street behind them">
-                        
-                        <h3>Print</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus ex sapien vitae pellentesque sem placerat in. 
-                            Cursus mi pretium tellus duis convallis tempus leo. Aenean sed diam urna tempor pulvinar vivamus fringilla.</p>
-                        <button class="printplans" type="submit"><span>Print Plans</span>
-                        <span class="material-symbols-outlined">arrow_right</span>
-                        </button>
-                    </div>
-                
-            </article>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="marketing">
+                            <img src="images/marketing.jpg" alt="an image of an open laptop with graphs on the screen">
+                            
+                            <h3>Marketing</h3>
+                            <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus
+                                bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit.</p>
+                            
+                                <button class="marketingplans" type="submit"><span>Marketing Plans</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                            </button>
+                        </div>
+                    </article>
+            </div>
+            <div class="servicebtm"
+                    <article>
+                        <div class="video">
+                            <img src="images/video.jpg" alt="an image of a hand holding a phone with a video app open">
+                            
+                            <h3>Video Production</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. Sem 
+                                placerat in id cursus mi pretium tellus. Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar 
+                                vivamus fringilla lacus.</p>
+                            
+                            <button class="videoplans" type="submit"><span>Video Plans</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                            </button>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="webdev">
+                            <img src="images/web.jpg" alt="An image of a phone with Instagram open on the screen">
+                            
+                            <h3>Web Development</h3>
+                            <p>Nec metus bibendum egestas iaculis massa nisl malesuada. Integer nunc posuere ut hendrerit semper vel class. Taciti
+                                sociosqu ad litora torquent per conubia nostra. Himenaeos orci varius natoque penatibus et magnis dis. </p>
+                                <button class="webplans" type="submit"><span>Web Plans</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                            </button>
+                            
+                        </div>
+                    </article>
+                    <article>
+                        <div class="print">
+                            <img src="images/print.jpg" alt="An image of six newspaper boxes on a sidewalk with a busy street behind them">
+                            
+                            <h3>Print</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus ex sapien vitae pellentesque sem placerat in. 
+                                Cursus mi pretium tellus duis convallis tempus leo. Aenean sed diam urna tempor pulvinar vivamus fringilla.</p>
+                            <button class="printplans" type="submit"><span>Print Plans</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                            </button>
+                        </div>
+                </article>
+            </div>
         </div>
     </section>
     <!-- the next obvious box is the Our Vision section which i put in a box called vision. It makes sense to group

@@ -92,37 +92,37 @@
             <div class="servicehead">
             <h2>Our Services</h2>
             </div>
-
-            <div class="servicetop"
-                    <article>
-                        <div class="digitrans">
-                            <img src="images/digital.jpg" alt="An image of a hand holding a cell phone in one hand while working on a computer with the other">
+                <div class="services">
+                    <div class="servicetop">
+                        <article>
+                            <div class="digitrans">
+                                <img src="images/digital.jpg" alt="An image of a hand holding a cell phone in one hand while working on a computer with the other">
+                                
+                                <h3>Digital Transformation</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.
+                                    Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis 
+                                    convallis tempus leo eu aenean.</p>
+                                    <button class="digitalplans" type="submit"><span>Digital Plans</span>
+                                <span class="material-symbols-outlined">arrow_right</span>
+                                </button>
                             
-                            <h3>Digital Transformation</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae.
-                                Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis 
-                                convallis tempus leo eu aenean.</p>
-                                <button class="digitalplans" type="submit"><span>Digital Plans</span>
-                            <span class="material-symbols-outlined">arrow_right</span>
-                            </button>
-                        
-                        </div>
-                    </article>
-                    <article>
-                        <div class="marketing">
-                            <img src="images/marketing.jpg" alt="an image of an open laptop with graphs on the screen">
-                            
-                            <h3>Marketing</h3>
-                            <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus
-                                bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit.</p>
-                            
-                                <button class="marketingplans" type="submit"><span>Marketing Plans</span>
-                            <span class="material-symbols-outlined">arrow_right</span>
-                            </button>
-                        </div>
-                    </article>
-            </div>
-            <div class="servicebtm"
+                            </div>
+                        </article>
+                        <article>
+                            <div class="marketing">
+                                <img src="images/marketing.jpg" alt="an image of an open laptop with graphs on the screen">
+                                
+                                <h3>Marketing</h3>
+                                <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus
+                                    bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit.</p>
+                                
+                                    <button class="marketingplans" type="submit"><span>Marketing Plans</span>
+                                <span class="material-symbols-outlined">arrow_right</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="servicebtm">
                     <article>
                         <div class="video">
                             <img src="images/video.jpg" alt="an image of a hand holding a phone with a video app open">
@@ -162,6 +162,7 @@
                             </button>
                         </div>
                 </article>
+                </div>
             </div>
         </div>
     </section>
@@ -189,54 +190,63 @@
         <div class="team">
 
             <h2>Our Team</h2>
-
-            <article>
-                <div class="johndoe">
-                <img src="images/john.jpg" alt="An image of CEO and co-owner John Doe">
-                
-                <h3>John Doe</h3>
-                <h4> CEO and Co-owner</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. 
-                    Sem placerat in id cursus mi pretium tellus. </p>
-                
+                <div class="teammembers">
+                <article>
+                    <div class="johndoe">
+                        <div class="johnimg">
+                        <img src="images/john.jpg" alt="An image of CEO and co-owner John Doe">
+                        </div>
+                        <div class="johntext"> <!-- the act of putting the text for bob and john
+                            into their own divs hopefully will make it easier to place it
+                            accurately with grid -->
+                        <h3>John Doe</h3>
+                        <h4> CEO and Co-owner</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. 
+                            Sem placerat in id cursus mi pretium tellus. </p>
+                        </div>
+                    </div>
+                </article>
+                    <article>
+                        <div class="bobrite">
+                            <div class="bobimg">
+                            <img src="images/bob.jpg" alt="An image of CFO and co-owner Bob Rite">
+                            </div>
+                            <div class="bobtext">
+                            <h3>Bob Rite</h3>
+                            <h4>CFO and Co-Owner</h4>
+                            <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus 
+                                nec metus bibendum egestas iaculis massa nisl.</p>
+                            </div>
+                        </div>
+                </article>
             </div>
-        </article>
-            <article>
-                <div class="bobrite">
-                <img src="images/bob.jpg" alt="An image of CFO and co-owner Bob Rite">
-                
-                <h3>Bob Rite</h3>
-                <h4>CFO and Co-Owner</h4>
-                <p>Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus 
-                    nec metus bibendum egestas iaculis massa nisl.</p>
-                
-            </div>
-        </article>
         </div>
     </section>
     <!-- the next section after is the white box that contains the contact form, the hours table and the google maps address.
     For the contact section, each form element has a label and an input box. At the bottom there is a submit button to send 
     all of the information.-->
-    <section>
+    <section class="conhourmap">
         <div class="contact">
         <form>
             <h2>Contact Us</h2>
-            <h3>Send us a message</h3>
-            <div>
-                <p>Full Name</p>
-                <input id="fullname" type="text">
+            <div class="sendmsg"> <!-- had to break this up further to separate more grid elements in css-->
+                <h3>Send us a message</h3>
+                <div>
+                    <p>Full Name</p>
+                    <input id="fullname" type="text">
+                </div>
+                <div>
+                    <p>Email</p>
+                    <input id="email" type="email">
+                </div>
+                <div>
+                    <p>Message</p>
+                    <textarea id="message"></textarea>
+                </div>
+                <button class="contactsend" type="submit"><span>Send</span>
+                    </button>
             </div>
-            <div>
-                <p>Email</p>
-                <input id="email" type="email">
-            </div>
-            <div>
-                <p>Message</p>
-                <textarea id="message"></textarea>
-            </div>
-            <button class="contactsend" type="submit"><span>Send</span>
-                </button>
-        </form>
+            </form>
         </div>
         <!-- hours is a smaller nested div class with an h2 heading and a table with the business hours.
         thead denotes the top of the table. tr is a row of things in a table and I want days and hours 

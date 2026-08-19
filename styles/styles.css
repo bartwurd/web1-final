@@ -694,9 +694,13 @@ trouble combining it correctly. I modified it a bit to make it match the mockup 
     margin-bottom:10px;
 }
 
-.hours, table {
-  width: auto;
+.hours{
+
 } 
+
+.hours table{
+    width: 100%;
+}
 
 /* 2. Re-establish text alignment and padding */
 .hours table th {
@@ -829,57 +833,274 @@ when the site is displayed wider than 760px */
     SERVICES
     **************************************************/
 
-    /* I'm going to use flexbox to style the desktop service section. I thought about using grid here,
-    but with there being 2 wider boxes on top and 3 skinny below, it would mean doing more math than I wanted to.
-    Instead I'm wrapping the header for it and the top two boxes in new divs and the bottom three in a new div, so that within
-    those divs I can display flex but then have those 3 flexboxes separate from each other so one sits on top
-    of the other. */
-
+    /* By setting very specific parameters for the height and width of everything,
+    I was able to use grids to arrange them.*/
     .servicebox{
-        width:80%;
+        width:700px;
+        margin: 0 auto;
     }
-
-    .servicehead{
-        margin-left:
-    }
-
     .servicetop{
-        display:flex;
+        display:grid;
+        grid-template-columns: 1fr, 1fr; 
+        grid-template-rows: 1fr; 
+        grid-template-areas:
+        "one"
+        "two";
+        gap:10px;
+        }
+
+        .digitrans{grid-area:one;}
+        .marketing{grid-area:two;}
+
+        .digitrans{
+            display:flex;
+            flex-direction:column; /*makes the flex items arrange vertically */
+            height:650px;
+            width: 350px;
+            overflow: hidden;
+        }
+
+        .digitrans img{
+            height:300px;
+            width:auto;
+            object-fit:cover;
+        }
+
+        .digitrans button{ 
+        margin-top: auto;  
+        }
         
-    }
+        .digitalplans{
+            justify-content:center;
+        }
+
+        .marketing{
+            display:flex;
+            flex-direction: column;
+            height:650px;
+            width: 350px;
+            margin-top:0;
+            overflow: hidden;
+        }
+
+        .marketing img{
+            height:300px;
+            width:auto;
+            object-fit:cover;
+        }
+
+        .marketing button{
+            margin-top: auto;
+        }
+
+        .marketingplans{
+            justify-content:center;
+        }
+        @media screen{
+            .servicetop{
+                grid-template-areas:
+                "one two"
+            }
 
     .servicebtm{
-        display:flex;
-    }
+        margin-top:10px;
+        display:grid;
+        grid-template-columns: 1fr, 1fr, 1fr; 
+        grid-template-rows: 1fr; 
+        grid-template-areas:
+        "one"
+        "two"
+        "three";
+        gap:10px;
+        }
 
-    .digitrans{
-        margin:5px;
-    }
+        .video{grid-area:one;}
+        .webdev{grid-area:two;}
+        .print{grid-area:three;}
 
-    .digitrans img{
-        height:300px;
-    }
+        .video{
+            margin-top:0px;
+            display:flex;
+            flex-direction:column; /*makes the flex items arrange vertically */
+            height:650px;
+            width: 233px;
+            overflow: hidden;
+        }
 
-    .marketing{
-        margin:5px;
-    }
+        .video img{
+            height:300px;
+            width:auto;
+            object-fit:cover;
+        }
 
-    .marketing img{
-        height:300px;
-    }
+        .video button{ 
+        margin-top: auto;  
+        }
 
-   .video{
-        margin:5px;
-    }
+        .videoplans{
+            justify-content:center;
+        }
 
-    .video img{
-        height:300px;
-    }
+        .webdev{
+            display:flex;
+            flex-direction: column;
+            height:650px;
+            width: 233px;
+            margin-top:0;
+            overflow: hidden;
+        }
 
-    .digitrans button{
-        width:96%;
-    }
+        .webdev img{
+            height:300px;
+            width:auto;
+            object-fit:cover;
+        }
 
-    .marketing button{
-        width:96%;
-    }
+        .webdev button{
+            margin-top: auto;
+        }
+
+        .webplans{
+            justify-content: center;
+        }
+
+        .print{
+            display:flex;
+            flex-direction: column;
+            height:650px;
+            width: 233px;
+            margin-top:0;
+            overflow: hidden;
+        }
+
+        .print img{
+            height:300px;
+            width:auto;
+            object-fit:cover;
+        }
+
+        .print button{
+            margin-top: auto;
+        }
+
+        .printplans{
+            justify-content: center;
+        }
+        
+        @media screen{
+            .servicebtm{
+                grid-template-areas:
+                "one two three"
+            }
+            
+        }
+
+
+/**********************************************************************
+TEAM
+********************************************************************/
+
+
+    /* By setting very specific parameters for the height and width of everything,
+    I was able to use grids to arrange them.*/
+
+        .team{
+            width:700px;
+            margin: 0 auto; /* sets the top margin to 0 but sets the side margins to automatically center the content 
+            WITHOUT having to use flex and mess my grids up */
+            
+        }
+
+        .johndoe{
+            display:grid;
+            width:auto;
+            grid-template-columns: 1fr, 1fr; 
+    
+            grid-template-rows: 1fr; 
+            }
+
+            .johnimg{grid-area:one;}
+            .johntext{grid-area:two;}
+
+            @media screen{
+                .johndoe{
+                    grid-template-areas:
+                    "one two"
+            }
+        }
+
+        .johnimg{
+            width:350px;
+        }
+
+        .bobrite{
+            display:grid;
+            width:100%;
+            grid-template-columns: 1fr, 1fr; 
+    
+            grid-template-rows: 1fr; 
+            grid-template-areas:
+            "one two";
+
+            }
+
+            .bobimg{grid-area:two;}
+            .bobtext{grid-area:one;}
+
+        }
+        .bobimg{
+            width:350px;
+        }
+
+
+
+/**************************************************************************************************************
+CONTACT, HOURS, MAP
+*****************************************************************************************************************/
+
+/* My plan is to use grid to arrange the different items and rearrange them so that the hours table appears 
+third instead of second.*/
+
+
+.conhourmap{
+            margin: 0 auto;
+            display:grid;   
+            width:700px;
+            gap: 10px;
+            grid-template-columns: 1fr, 1fr; 
+            grid-template-rows: 1fr, 1fr, 1fr; 
+            grid-template-areas:
+            "one one"
+            "two three"
+            "four four";
+            }
+
+            .contact h2{grid-area:one;}
+            .sendmsg{grid-area:two;}
+            .location{grid-area:three;}
+            .hours{grid-area:four;}
+
+            .contact{
+                width:auto;
+                height:auto;
+                margin:0;
+            }
+            .map iframe{
+                height: 300px;
+            }
+            .location{
+                width:auto;
+                height:auto;
+                margin:0px;
+            }
+
+            .hours{
+                margin:0;
+                width:auto;
+            }
+            }
+
+            footer p{
+            margin-left:10%;
+            }
+        }

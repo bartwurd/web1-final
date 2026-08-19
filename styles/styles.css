@@ -1058,8 +1058,7 @@ TEAM
 CONTACT, HOURS, MAP
 *****************************************************************************************************************/
 
-/* My plan is to use grid to arrange the different items and rearrange them so that the hours table appears 
-third instead of second.*/
+/* Using grid, I was able to place the hours at the end of the list unlike in the mobile version.*/
 
 
 .conhourmap{
@@ -1075,32 +1074,27 @@ third instead of second.*/
             "four four";
             }
 
-            .contact h2{grid-area:one;}
-            .sendmsg{grid-area:two;}
+            .conhourmap h2{grid-area:one;}
+            .contact{grid-area:two;}
             .location{grid-area:three;}
             .hours{grid-area:four;}
 
-            .contact{
-                width:auto;
-                height:auto;
-                margin:0;
-            }
-            .map iframe{
-                height: 300px;
-            }
-            .location{
-                width:auto;
-                height:auto;
-                margin:0px;
+            .conhourmap h2{
+                padding-top: 20px;
+                padding-bottom:20px;
             }
 
-            .hours{
-                margin:0;
-                width:auto;
-            }
+            .contact textarea{
+                height:140px;
+            } /* made the text area larger like in the mockup*/
+            .map iframe{
+                height:300px;
+            } /* wanted to make the map shorter */
+
             }
 
             footer p{
             margin-left:10%;
             }
-        }
+            
+}
